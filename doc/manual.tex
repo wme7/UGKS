@@ -218,7 +218,7 @@ The overview flow chart of the solution algorithm in one iteration is shown in F
 In the program, the following nondimensionalization is used,
 \begin{gather*}
     \hat t=\frac{t}{t_\infty},\ \hat u_x=\frac{u_x}{C_\infty},\ \hat x=\frac{x}{L_\infty},\ \hat \rho=\frac{\rho}{\rho_\infty},\ \hat T=\frac{T}{T_\infty}, \hat p=\frac{p}{\rho_\infty C_\infty^2}, \\
-    \hat q=\frac{q}{\rho_\infty C_\infty^3},\ \hat h=\frac{h}{\rho_\infty/C_\infty},\ \hat b=\frac{b}{\rho_\infty},\ \hat E=\frac{E}{C_\infty^2}, \hat\mu = \frac{\mu}{\rho_\infty C_\infty L_\infty},
+    \hat q=\frac{q}{\rho_\infty C_\infty^3},\ \hat h=\frac{h}{\rho_\infty/C_\infty},\ \hat b=\frac{b}{\rho_\infty C_\infty},\ \hat E=\frac{E}{C_\infty^2}, \hat\mu = \frac{\mu}{\rho_\infty C_\infty L_\infty},
 \end{gather*}
 
 The free stream variables are related through,
@@ -234,7 +234,7 @@ In the following, all variables are nondimensionalized, but we will drop the "\t
     \end{aligned}
 \end{equation}
 \begin{equation} 
-    \frac{K+1}{2}p=\int(u-U)^2h{\rm du}+\int b{\rm du}=\sum\alpha_k(u_k-U)^2 h_k+\sum\alpha_k b_k,
+    (K+1)p=\int(u-U)^2h{\rm du}+\int b{\rm du}=\sum\alpha_k(u_k-U)^2 h_k+\sum\alpha_k b_k,
 \end{equation}
 \begin{equation} 
     \label{eq:heatflux}
@@ -396,7 +396,7 @@ $$h_{i+1/2,k} = (h_{i,k}+(x_{i+1/2}-x_i)\sigma_{i,k}^h)H[u_k]+(h_{i+1,k}-(x_{i+1
 $W_0$ is calculated from Eq. \ref{eq:conserved_var}, with $h_k=h_{i+1/2,k}, b_k=b_{i+1/2,k}$.
 
 Then the primary variables is obtained from the relation (the expression for $\lambda$ below only holds for equilibrium state),
-$$\rho_0 = \rho_0,\quad U_0=\frac{\rho_0 U_0}{\rho_0},\quad \lambda_0=\frac{(K+1)\rho_0}{4\left(\rho_0 E_0-\frac{1}{2}\rho(U_0^2+V_0^2)\right)}.$$
+$$\rho_0 = \rho_0,\quad U_0=\frac{\rho_0 U_0}{\rho_0},\quad \lambda_0=\frac{(K+1)\rho_0}{4\left(\rho_0 E_0-\frac{1}{2}\rho U_0^2\right)}.$$
 
 The heat flux is calculated by Eq. \ref{eq:heatflux}, with $h_k=h_{i+1/2,k},b_k=b_{i+1/2,k},U=U_0$.
 
