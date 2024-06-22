@@ -13,3 +13,4 @@ bin
 *.add
 *.add.spl
 *.phy
+.DS_Store
